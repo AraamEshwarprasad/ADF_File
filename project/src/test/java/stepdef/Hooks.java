@@ -14,9 +14,9 @@ public class Hooks
 		//System.out.println("This will run before the Scenario");
 	}
 
-	@After
-	public void afterScenario(){
-		Basepage.quit();
-		//System.out.println("This will run after the Scenario");
-	}
+//	@After
+//	public void afterScenario(){
+//		Basepage.quit();
+//		//System.out.println("This will run after the Scenario");
+//	}
 }
