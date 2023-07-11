@@ -15,7 +15,7 @@ public class login_steps
 
 	public void i_am_at_the_audio_digest_home_page_and_validate() throws Exception {
 
-		Basepage.driverIn();
+		validations.IsTrue(common_methods.CurrentUrl(), constant.HomePageUrl, "home page url is not displayed");
 
 	}
 

@@ -48,7 +48,7 @@ public class Playlist_page
 	public static void NavigateToPlaylist() throws Exception
 
 	{
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		PlaylistTab().click();
 		Thread.sleep(3000);
 
@@ -56,13 +56,13 @@ public class Playlist_page
 	public static void ClickOnCreatePlaylist() throws Exception
 	{
 		CreatePlaylistBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 	}
 	public static void Entername() throws Exception
 	{
 		nameEnter().click();
-		Thread.sleep(5000);
-		nameEnter().sendKeys("chint");
+		Thread.sleep(3000);
+		nameEnter().sendKeys("adf12345678");
 	}
 	public static void clickoncreateButton() throws InterruptedException
 	{

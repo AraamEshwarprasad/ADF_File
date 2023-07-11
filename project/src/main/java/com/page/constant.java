@@ -12,9 +12,9 @@ public class constant
 
 	public final static String libraryUrl="https://www.audio-digest.org/Library";
 
-	public final static String updated_Playlist_Name="playlist01";
+	//public final static String updated_Playlist_Name="playlist01";
 
-	public final static String speciality="Neurology";
+	//public final static String speciality="Neurology";
 
 	public final static String playlist_Name="myplaylist";
 
