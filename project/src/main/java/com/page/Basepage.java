@@ -36,48 +36,34 @@ public class Basepage
 
 	public static WebDriver getDriver()
 	{
-
 		return driver;
-
 	}
 
 	// To quit the browser
-
 	public static void quit() 
 	{
-
 		driver.quit();
-
 	}
 
 	public static FileInputStream fi;
-
 	public static Properties p;
 
 	public static void properties_fileRead() throws IOException
 	{
 
 		fi=new FileInputStream("D:\\JSON_WORKSPACE\\ADF_File\\project\\src\\main\\resources\\file.properties");
-
 		p= new Properties();
-
 		p.load(fi);
-
 		fi.close();
-
 	}
 
 	public static String Uername() throws IOException
 	{
-
 		return p.getProperty("username");
-
 	}
 
 	public static String paswd() throws IOException 
 	{
-
 		return p.getProperty("Password");
-
 	}
 }

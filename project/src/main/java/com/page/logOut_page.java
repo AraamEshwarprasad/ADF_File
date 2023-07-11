@@ -36,9 +36,9 @@ public class logOut_page
 	public static void clickProfiledrpDown() throws Exception
 	{
 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		ProfileDrpDwnBtn().click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 	}
 
 	public static void profileDrpDwnListDisplayed() throws Exception
@@ -49,9 +49,9 @@ public class logOut_page
 
 	public static void LogoutBtn() throws Exception 
 	{
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		LogoutButton().click();
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 	}
 }

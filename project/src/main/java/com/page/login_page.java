@@ -35,26 +35,26 @@ public class login_page
 	//actions
 	public static void profilelgnbtn_click() throws InterruptedException {
 
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 
 		profileloginbtnn().click();
 
 	}
 	public static void enterEmailId(String emailId) throws Exception
 	{
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		EmailTextBox().sendKeys(emailId);
 
 	}
 
 	public static void enterPassword(String password) throws Exception 
 	{
-		Thread.sleep(6000);
+		Thread.sleep(3000);
 		PwdTextBox().sendKeys(password);
 	}
 	public static void ClickOnLoginBtn() throws Exception
 	{
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		LoginButton().click();
 		Thread.sleep(3000);
 	}
