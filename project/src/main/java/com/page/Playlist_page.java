@@ -72,13 +72,13 @@ public class Playlist_page
 	{
 		nameEnter().click();
 		Thread.sleep(3000);
-		nameEnter().sendKeys("ad1234567891");
+		nameEnter().sendKeys("ad1234567891234567");
 	}
 	public static void Entername2() throws InterruptedException
 	{
 		nameEnter().click();
 		Thread.sleep(3000);
-		nameEnter().sendKeys("af12345678");
+		nameEnter().sendKeys("af12345678912345");
 	}
 	public static void clickoncreateButton() throws InterruptedException
 	{

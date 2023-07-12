@@ -76,6 +76,8 @@ public class playlist_Operations_steps
 	@Then("I logout user")
 	public void i_logout_user() throws Exception 
 	{
+		logOut_page.clickProfiledrpDown();
+		logOut_page.profileDrpDwnListDisplayed();
 		logOut_page.LogoutBtn();
 	}
 	
@@ -117,5 +119,4 @@ public class playlist_Operations_steps
 	}
 
 	
-
 }
