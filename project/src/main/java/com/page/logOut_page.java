@@ -49,7 +49,7 @@ public class logOut_page
 
 	public static void LogoutBtn() throws Exception 
 	{
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		LogoutButton().click();
 		Thread.sleep(2000);
 
