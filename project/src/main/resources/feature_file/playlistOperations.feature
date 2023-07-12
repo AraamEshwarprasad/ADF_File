@@ -40,6 +40,6 @@ And navigate back to playlist tab
 
 And I click on play all icon of newly created playlist and validate
 
-And I click on labrary tab and archive above added any one lecture to the playlist
+
 
 

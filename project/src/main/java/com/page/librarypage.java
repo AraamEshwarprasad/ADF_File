@@ -15,10 +15,12 @@ public class librarypage
 	public static final By stateaddplaylist =By.xpath("//td[@class='title']//a[@id='container_2_rgLibrary_ctl00_ctl06_AddToPlaylistButton_hlModal']");
 	public static final By selectingcourse2By= By.xpath("//input[@id='cb3437040']");
 	
+	public static final By AllcoursesBy= By.xpath("//table[@id='container_2_rgLibrary_ctl00']");
 	public static final By playButtonBy= By.xpath("//div[@id='container_2_rgLibrary_ctl00_ctl04_LibraryPlayButton_divPlayContainer']");
 	public static final By HibuttonBy = By.xpath("//a[@class='dropdown profile top-head-link']");
 	public static final By logoutButtonBy = By.xpath("//a[text()='Logout']");
 	
+	public static final By creditsButtonBy = By.xpath("//a[text()='Credits']");
 	
 	
 	
@@ -66,6 +68,11 @@ public class librarypage
 	}
 	
 	
+	
+	public static WebElement allcourses()
+	{
+		return Basepage.getDriver().findElement(AllcoursesBy);
+	}
 	public static WebElement playBtn()
 	{
 		return Basepage.getDriver().findElement(playButtonBy);
@@ -80,6 +87,10 @@ public class librarypage
 	}
 	
 	
+	public static WebElement creditBtn()
+	{
+		return Basepage.getDriver().findElement(creditsButtonBy);
+	}
 	
 	
 	
@@ -168,6 +179,14 @@ public class librarypage
 		logoutBtn().click();
 		Thread.sleep(3000);
 	}
+	
+	public static void credit() throws Exception
+	{
+		creditBtn().click();
+		Thread.sleep(3000);
+	}
+	
+	
 	
 //	public static void preventionAddplay() throws Exception
 //	{
