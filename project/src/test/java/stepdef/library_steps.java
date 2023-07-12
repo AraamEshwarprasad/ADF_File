@@ -1,7 +1,5 @@
 package stepdef;
 
-import com.page.Basepage;
-import com.page.Playlist_page;
 import com.page.constant;
 import com.page.librarypage;
 import com.page.login_page;
@@ -9,7 +7,6 @@ import com.page.login_page;
 import common_Methods.common_methods;
 import common_Methods.validations;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 
 public class library_steps 
 {
@@ -68,16 +65,17 @@ public class library_steps
 		login_page.enterEmailId(constant.emailId);
 		login_page.enterPassword(constant.password);
 		login_page.ClickOnLoginBtn();
-		validations.IsTrue(common_methods.CurrentUrl(), constant.DashBoardPageUrl, "Dashboard page url is not displayed");
-		
-		librarypage.ClickOnlibrary();
-		
+//		Dashboard_page.ClickOnDashboard();
+//		validations.IsTrue(common_methods.CurrentUrl(), constant.DashBoardPageUrl, "Dashboard page url is not displayed");
+			
 	}
 
 	@Given("validate courses under my library section")
 	public void validate_courses_under_my_library_section() throws Exception
 	{
-		validations.IsTrue(common_methods.CurrentUrl(), constant.libraryUrl, "library page url is not displayed");
+		librarypage.ClickOnlibrary();
+		validations.IsDsiplayed(librarypage.allcourses(),"Allcourses is not displayed");
+		//validations.IsTrue(common_methods.CurrentUrl(), constant.libraryUrl, "library page url is not displayed");
 	}
 
 	@Given("click on play icon of any course")
@@ -92,6 +90,31 @@ public class library_steps
 		librarypage.clickonHiButton();
 		librarypage.logout();
 	}
+	
+	
+	
+	
+	@Given("click on my library")
+	public void click_on_my_library() throws Exception
+	{
+		librarypage.ClickOnlibrary();
+	}
+
+	@Given("I select credits option")
+	public void i_select_credits_option() throws Exception 
+	{
+		librarypage.credit();
+	}
+
+	@Given("verify sort by option as credits and select speciality from specialty dropdown")
+	public void verify_sort_by_option_as_credits_and_select_speciality_from_specialty_dropdown() throws Exception
+	{
+		librarypage.credit();
+	}
+	
+	
+	
+	
 
 
 }

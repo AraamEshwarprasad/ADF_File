@@ -13,7 +13,7 @@ public class Playlist_page
 	public static final By createButtonBy = By.xpath("//input[@value='CREATE']");
 	public static final By clickonAllBy= By.xpath("//a[@id='lnkAllCM']");
 	public static final By backtoplaylisttabBy= By.xpath("//span[text()='Playlists']");
-	public static final By AllbtnBy= By.xpath("//a[text()='All (81) ']");
+	//public static final By AllbtnBy= By.xpath("//a[text()='All (81) ']");
 
 
 
@@ -46,10 +46,10 @@ public class Playlist_page
 	{
 		return Basepage.getDriver().findElement(backtoplaylisttabBy);
 	}
-	public static WebElement allButton()
-	{
-		return Basepage.getDriver().findElement(AllbtnBy);
-	}
+//	public static WebElement allButton()
+//	{
+//		return Basepage.getDriver().findElement(AllbtnBy);
+//	}
 	
 
 
@@ -72,13 +72,13 @@ public class Playlist_page
 	{
 		nameEnter().click();
 		Thread.sleep(3000);
-		nameEnter().sendKeys("ad12345678");
+		nameEnter().sendKeys("ad1234567891");
 	}
 	public static void Entername2() throws InterruptedException
 	{
 		nameEnter().click();
 		Thread.sleep(3000);
-		nameEnter().sendKeys("af123456");
+		nameEnter().sendKeys("af12345678");
 	}
 	public static void clickoncreateButton() throws InterruptedException
 	{
@@ -96,12 +96,12 @@ public class Playlist_page
 		Backplaylist().click();
 		Thread.sleep(3000);
 	}
-	public static void Allbutton() throws Exception
-	{
-		Thread.sleep(3000);
-		allButton().click();
-		Thread.sleep(3000);
-	}
+//	public static void Allbutton() throws Exception
+//	{
+//		Thread.sleep(3000);
+//		allButton().click();
+//		Thread.sleep(3000);
+//	}
 	
 
 

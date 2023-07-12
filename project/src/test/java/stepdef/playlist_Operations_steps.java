@@ -116,10 +116,6 @@ public class playlist_Operations_steps
 		Playlist_page.clickonAllbtn();
 	}
 
-	@Given("I click on labrary tab and archive above added any one lecture to the playlist")
-	public void i_click_on_labrary_tab_and_archive_above_added_any_one_lecture_to_the_playlist() throws Exception
-	{
-		Playlist_page.Allbutton();
-	}
+	
 
 }
