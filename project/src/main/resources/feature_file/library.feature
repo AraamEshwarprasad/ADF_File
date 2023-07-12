@@ -10,11 +10,8 @@ And click on play icon of any course
 
 And click on hi and click on logout
  
-Then I logout user
  
  
- 
-
 Scenario: verify and validate sort by credits option in my library page
 
 Given I am at the audiodigest home page to login as prerequsite

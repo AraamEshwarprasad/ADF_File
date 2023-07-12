@@ -1,12 +1,15 @@
 package stepdef;
 
+import com.page.Dashboard_page;
 import com.page.constant;
 import com.page.librarypage;
+import com.page.logOut_page;
 import com.page.login_page;
 
 import common_Methods.common_methods;
 import common_Methods.validations;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 public class library_steps 
 {
@@ -28,8 +31,8 @@ public class library_steps
 	////		Playlist_page.Entername();
 	////		Playlist_page.clickoncreateButton();
 	////		librarypage.ClickOnlibrary();
-	//		librarypage.ClickOnlibrary();
-	//		validations.IsTrue(common_methods.CurrentUrl(), constant.libraryUrl, "library page url is not displayed");
+	//		    librarypage.ClickOnlibrary();
+	//		    validations.IsTrue(common_methods.CurrentUrl(), constant.libraryUrl, "library page url is not displayed");
 	//	}
 	//
 	//	@Given("I click on add to playlist")
@@ -55,8 +58,9 @@ public class library_steps
 	//	{
 	//		librarypage.Save();
 	//	}
-
-
+   
+	
+	
 	@Given("I click on mydashboard tab")
 	public void i_click_on_mydashboard_tab() throws Exception
 	{
@@ -65,6 +69,7 @@ public class library_steps
 		login_page.enterEmailId(constant.emailId);
 		login_page.enterPassword(constant.password);
 		login_page.ClickOnLoginBtn();
+		
 //		Dashboard_page.ClickOnDashboard();
 //		validations.IsTrue(common_methods.CurrentUrl(), constant.DashBoardPageUrl, "Dashboard page url is not displayed");
 			
@@ -89,6 +94,10 @@ public class library_steps
 	{
 		librarypage.clickonHiButton();
 		librarypage.logout();
+		
+//		logOut_page.clickProfiledrpDown();
+//		logOut_page.profileDrpDwnListDisplayed();
+//		logOut_page.LogoutBtn();
 	}
 	
 	

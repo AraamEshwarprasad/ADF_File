@@ -24,7 +24,7 @@ Then I logout user
    
    
     
-Scenario: verify validate playall functionality when palylist lecture is archived
+Scenario: verify validate playall functionality when palylist lecture
 
 Given I am at the audiodigest home page to login as prerequsite
  
