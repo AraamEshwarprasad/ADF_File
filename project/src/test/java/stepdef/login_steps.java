@@ -1,6 +1,5 @@
 package stepdef;
 
-import com.page.Basepage;
 import com.page.constant;
 import com.page.login_page;
 

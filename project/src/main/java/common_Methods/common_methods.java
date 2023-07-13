@@ -14,160 +14,156 @@ public class common_methods
 	public static WebDriver driver = Basepage.getDriver();
 
 	// Method to perform click
-
-	public void Click(WebElement element) {
-
-		if (element.isDisplayed() && element.isEnabled()) {
-
+	public void Click(WebElement element)
+	{
+		if (element.isDisplayed() && element.isEnabled()) 
+		{
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-
 			js.executeScript("arguments[0].scrollIntoView()", element);
-
 			element.click();
-
 		}
-
 	}
 
 	//Method to enter text
-
-	public void EnterInfo(WebElement element, String value) {
-
+	public void EnterInfo(WebElement element, String value)
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
 		js.executeScript("arguments[0].scrollIntoView()", element);
-
 		element.clear();
-
 		element.sendKeys(value);
-
 	}
 
 	//Method to Select Checkbox
-
-	public void SelectCheckbox(WebElement element) {
-
+	public void SelectCheckbox(WebElement element)
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
 		js.executeScript("arguments[0].scrollIntoView()", element);
-
 		if(!element.isSelected())
-
 			element.click();
-
 	}
 
 	//Method to Select Dropdown option
-
-	public void SelectOption(WebElement element,String option, String By) {
-
+	public void SelectOption(WebElement element,String option, String By)
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
 		js.executeScript("arguments[0].scrollIntoView()", element);
-
 		Select s = new Select(element);
-
-		if(By.equals("value")) {
-
+		if(By.equals("value")) 
+		{
 			s.selectByValue(option);
-
-		}else if(By.equals("visibleText")) {
-
-			s.selectByVisibleText(option);
-
-		}else if(By.equals("index")) {
-
-			s.selectByIndex(Integer.parseInt(option));
-
 		}
-
+		else if(By.equals("visibleText")) 
+		{
+			s.selectByVisibleText(option);
+		}else if(By.equals("index"))
+		{
+			s.selectByIndex(Integer.parseInt(option));
+		}
 	}
 
 	//Method to perform double click
-
-	public void DoubleClick(WebElement element) {
-
+	public void DoubleClick(WebElement element)
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
 		js.executeScript("arguments[0].scrollIntoView()", element);
-
 		Actions action = new Actions(driver);
-
 		action.doubleClick(element).build().perform();
-
 	}
 
 	//Method to perform right click
-
-	public void RightClick(WebElement element) {
-
+	public void RightClick(WebElement element)
+	{
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-
 		js.executeScript("arguments[0].scrollIntoView()", element);
-
 		Actions action = new Actions(driver);
-
 		action.contextClick(element).build().perform();
-
 	}
 
 	//Method to perform drag and drop
-
-	public void DragAndDrop(WebElement source, WebElement target) {
-
+	public void DragAndDrop(WebElement source, WebElement target) 
+	{
 		Actions action = new Actions(driver);
-
 		action.dragAndDrop(source,target).build().perform();
-
 	}
 
 	//Method to implicit wait
-
-	public void ImplicitWait() {
-
+	public void ImplicitWait() 
+	{
 		driver.manage().timeouts().implicitlyWait(java.time.Duration.ofSeconds(5));
-
 	}
 
 	//Method to get title of the Page
-
-	public String getTitle() {
-
+	public String getTitle()
+	{
 		return driver.getTitle();
-
 	}
 
 	// Method to click on alert button
-
-	public void ClickOnAlert(String option) {
-
+	public void ClickOnAlert(String option)
+	{
 		Alert alert = driver.switchTo().alert();
-
 		if (option.equals("ok"))
-
 			alert.accept();
-
 		else if (option.equals("cancel"))
-
 			alert.dismiss();
-
 	}
 
 	// To get currentUrl
-
-	public static String CurrentUrl() {
-
+	public static String CurrentUrl() 
+	{
 		//System.out.println(Basepage.getDriver().getCurrentUrl());
-
 		return Basepage.getDriver().getCurrentUrl();
-
 	}
 
 	// To close current browser
-
-	public static void close() {
-
+	public static void close() 
+	{
 		driver.close();
-
 	}
+	
+
+	
+	public static void selectDropDown(WebElement element,String selecttext)
+	{
+		Select s=new Select(element);
+		s.selectByVisibleText(selecttext);
+	}
+
+	public static String clickSearchMenuAndTypeOption(String Xpath,String option)
+	{
+
+		return String.format(Xpath,option);
+	}
+//	public static void selectSpecialtyByDropdown() throws Exception
+//	{
+//		Thread.sleep(3000);
+//		System.out.println(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics"));
+//		WebElement s=Driver.getDriver().findElement(By.xpath(Common_methods.clickSearchMenuAndTypeOption(Library_page.selectspecality,"Orthopaedics")));
+//		s.click();
+//	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
