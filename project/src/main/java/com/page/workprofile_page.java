@@ -19,7 +19,7 @@ public class workprofile_page
 	public static final By secondaryspecialityBy = By.xpath("//select[@id='selSpecialty2']");
 	public static final By ABMSBoardBy = By.xpath("//select[@id='selBoards']");
 	public static final By boardidBy = By.xpath("//input[@id='txtBoardId']");
-	public static final By birthmonthBy = By.xpath("//select[@id='ddlMonth']");
+	public static final By birthmonthBy = By.xpath("//select[@name='container_1$profiletabs_0$ddlMonth']");
 	public static final By birthdayBy = By.xpath("//select[@id='ddlDay']");
 	public static final By saveButtonBy = By.xpath("//input[@value='SAVE']");
 	

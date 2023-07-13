@@ -35,10 +35,6 @@ public class workprofile_steps
 	}
 	
 	
-	
-	
-	
-	
 	@Given("I click the drop down button on the top right side of the screen")
 	public void i_click_the_drop_down_button_on_the_top_right_side_of_the_screen() throws InterruptedException 
 	{
