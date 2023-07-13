@@ -14,8 +14,8 @@ public class Basepage
 
 	//To instantiate driver
 
-	public static void driverIn() throws Exception {
-
+	public static void driverIn() throws Exception
+	{
 		driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
@@ -33,7 +33,6 @@ public class Basepage
 	}
 
 	//to get driver
-
 	public static WebDriver getDriver()
 	{
 		return driver;

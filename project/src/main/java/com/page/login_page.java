@@ -8,7 +8,8 @@ public class login_page
 
 	//xpath
 	
-	public static final By profileloginbtn=By.xpath("//div[@id='loginSection']//a[@id='HlLogin']");
+	public static final By profileloginbtn=By.xpath("//div[@id='loginSection']//a");
+			//By.xpath("//div[@id='loginSection']//a[@id='HlLogin']");
 	public static final By EmailTextBoxBy =By.xpath("//input[@id='TxtUserName']");
 	public static final By PwdTextBoxBy =By.xpath("//input[@id='TxtPassword']");
 	public static final By LoginButtonBy=By.xpath("//input[contains(@id,'LbLogin')]");
@@ -20,20 +21,24 @@ public class login_page
 		return Basepage.getDriver().findElement(profileloginbtn);
 
 	}
-	static WebElement EmailTextBox() {
+	static WebElement EmailTextBox() 
+	{
 		return Basepage.getDriver().findElement(EmailTextBoxBy);
 	}
-	static WebElement PwdTextBox() {
+	static WebElement PwdTextBox() 
+	{
 
 		return Basepage.getDriver().findElement(PwdTextBoxBy);
 	}
-	static WebElement LoginButton() {
+	static WebElement LoginButton() 
+	{
 
 		return Basepage.getDriver().findElement(LoginButtonBy);
 	}
 
 	//actions
-	public static void profilelgnbtn_click() throws InterruptedException {
+	public static void profilelgnbtn_click() throws InterruptedException
+	{
 
 		Thread.sleep(3000);
 

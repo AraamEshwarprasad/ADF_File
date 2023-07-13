@@ -21,4 +21,14 @@ public class constant
 	public final static String emailId="on_silver@wk.com";
 
 	public final static String password="!QAZxsw2";
+	
+	public final static String Addictionmedicinevalue="Addiction Medicine";
+	
+	public final static String cardiacElectrophysiologyvalue = "Cardiac Electrophysiology";
+	
+	public final static String ABMSvalue = "American Board of Anesthesiology";
+	
+	public final static String birthmonthvalue ="5";
+	
+	public final static String BirthDayvalue ="4";
 }
